@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkschool_festival"]=self["webpackChunkschool_festival"]||[]).push([[443],{381:function(n,s,t){t.r(s),t.d(s,{default:function(){return f}});var a=t(252);const e={class:"about"},u=(0,a._)("h1",null,"This is an about page",-1),c=[u];function o(n,s){return(0,a.wg)(),(0,a.iD)("div",e,c)}var r=t(744);const i={},l=(0,r.Z)(i,[["render",o]]);var f=l}}]);
+//# sourceMappingURL=about.1a442aae.js.map
