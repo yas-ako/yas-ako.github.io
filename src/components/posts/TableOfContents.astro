@@ -1,0 +1,46 @@
+---
+import type { MarkdownHeading } from "astro";
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+
+const filteredHeadings = headings.filter((heading) => heading.depth <= 3);
+---
+
+{
+  filteredHeadings.length > 0 && (
+    <nav class="relative my-8 p-4 border border-gray-200 max-w-xs mx-auto">
+      <ul class="toc space-y-2">
+        {filteredHeadings.map((heading) => (
+          <li
+            class="text-sm text-gray-600 hover:text-blue-600 transition-colors list-disc"
+            style={{ marginLeft: `${(heading.depth - 1) * 1}rem` }}
+          >
+            <a href={`#${heading.slug}`} class="block">
+              {heading.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+
+<style>
+.toc::after{
+  display: block;
+  color:var(--color-gray-600);
+  content : "目次";
+  position: absolute;
+  top: -0.75rem;
+  font-size: var(--text-xs);
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding-inline: 1rem;
+}
+</style>

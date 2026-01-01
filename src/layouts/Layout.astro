@@ -1,22 +1,27 @@
+---
+import "../styles/global.css";
+import "@fontsource/zen-kaku-gothic-new/400.css";
+import "@fontsource/zen-kaku-gothic-new/700.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>yas-ako.github.io</title>
   </head>
-  <body>
-    <slot />
+  <body class="flex flex-col min-h-screen bg-white text-gray-900 font-sans overscroll-none">
+    <Header />
+
+    <main class="container mx-auto flex-1 max-w-3xl px-12">
+      <slot />
+    </main>
+
+    <Footer />
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>

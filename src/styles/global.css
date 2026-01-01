@@ -4,3 +4,10 @@
 @theme {
   --font-sans: "Zen Kaku Gothic New", sans-serif;
 }
+
+@layer utilities {
+  .prose-no-quotes blockquote p::before,
+  .prose-no-quotes blockquote p::after {
+    content: none;
+  }
+}
