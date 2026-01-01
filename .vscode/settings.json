@@ -10,6 +10,7 @@
     "source.fixAll.eslint": "explicit"
   },
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "tailwindcss",
+    "*.mdx": "mdx"
   }
 }
