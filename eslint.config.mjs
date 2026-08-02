@@ -1,8 +1,8 @@
 import stylistic from "@stylistic/eslint-plugin";
 import typescriptEslintParser from "@typescript-eslint/parser";
-import astroParser from "astro-eslint-parser";
+import * as astroParser from "astro-eslint-parser";
 import eslintPluginAstro from "eslint-plugin-astro";
-import importPlugin from "eslint-plugin-import";
+import importPlugin from "eslint-plugin-import-x";
 import tseslint from "typescript-eslint";
 
 export default [
@@ -22,17 +22,17 @@ export default [
   {
     plugins: {
       "@stylistic": stylistic,
-      import: importPlugin,
+      "import-x": importPlugin,
     },
     settings: {
-      "import/resolver": {
+      "import-x/resolver": {
         typescript: {
           alwaysTryTypes: true,
         },
       },
     },
     rules: {
-      "import/order": [
+      "import-x/order": [
         "error",
         {
           groups: [
